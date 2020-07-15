@@ -45,26 +45,7 @@ class create_payload:
     #     return
 
     def multiplespaces(payload, **kwargs):
-
-        retVal = payload
-
-        if payload:
-            words = set()
-
-            for match in re.finditer(r"[A-Za-z_]+", payload):
-                word = match.group()
-
-                if word.upper() in kb.keywords:
-                    words.add(word)
-
-            for word in words:
-                retVal = re.sub("(?<=\W)%s(?=[^A-Za-z_(]|\Z)" % word,
-                                "%s%s%s" % (' ' * random.randrange(1, 4), word,
-                                            ' ' * random.randrange(1, 4)),
-                                retVal)
-                retVal = re.sub("(?<=\W)%s(?=[(])" % word,
-                                "%s%s" % (' ' * random.randrange(1, 4), word),
-                                retVal)
+        return payload.replace
 
         return retVal
 # a = input("input")
