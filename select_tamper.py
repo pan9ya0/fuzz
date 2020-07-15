@@ -10,7 +10,6 @@
 class tamper():
     """
     @:parameter db_cate 指定数据库类型选择相应的绕过payload
-
     """
     def __init__(self,db_cate):
         self.db_cate = db_cate
@@ -20,3 +19,5 @@ class tamper():
         if not self.db_cate:
             print("将使用sqltamper 所有的tamper进行bypass尝试....")
             return 0
+
+    def

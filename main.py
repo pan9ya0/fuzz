@@ -22,14 +22,14 @@ def main():
     单个单词或符号fuzz
     """
 
-    # g = read_dict.read_dict(None, "detect").read_dict1()
-    # payload = next(g)
-    # try:
-    #     while payload:
-    #         print(payload)
-    #         payload = next(g)
-    # except Exception as e:
-    #     pass
+    g = read_dict.read_dict(None, "detect").read_dict1()
+    payload = next(g)
+    try:
+        while payload:
+            print(payload)
+            payload = next(g)
+    except Exception as e:
+        pass
     """
     关键字fuzz
     """
@@ -43,7 +43,7 @@ def main():
             payload = next(g)
     except Exception as e:
         pass
-
+    """"""
     # url = get_url()
     # payload = payload()
     # for i in payload:

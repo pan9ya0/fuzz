@@ -19,29 +19,23 @@ class read_dict:
 
     def read_dict1(self):
 
-        if self.path:
+        if self.path == None:
             pass
         elif os.path.exists(self.path):
-            with open(self.path,'r') as f:
-                tmp = f.readline()
-                while tmp:
-                    yield tmp
-                    tmp = f.readline()
+            read_txt(path)
 
         if self.category == "detect":
-            with open("SQL2.txt",'r') as f:
-                tmp = f.readline()
-                while tmp:
-                    yield tmp
-                    tmp = f.readline()
+            read_txt("SQL2.txt")
         if self.category == "exp":
-            with open("sql.txt", 'r') as f:
-                tmp = f.readline()
-                while tmp:
-                    yield tmp
-                    tmp = f.readline()
+            read_txt("sql.txt")
 
 
+def read_txt(self,path):
+    with open(path, 'r') as f:
+        tmp = f.readline()
+        while tmp:
+            yield tmp
+            tmp = f.readline()
 
-# g = get_dict(None,"detect").read_dict1()
-# print(next(g))
+g = read_dict(None,"detect").read_dict1()
+print(next(g))
