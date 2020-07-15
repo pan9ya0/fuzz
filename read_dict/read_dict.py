@@ -22,7 +22,12 @@ class read_dict:
         if self.path:
             pass
         elif os.path.exists(self.path):
-            with open()
+            with open(self.path,'r') as f:
+                tmp = f.readline()
+                while tmp:
+                    yield tmp
+                    tmp = f.readline()
+
         if self.category == "detect":
             with open("SQL2.txt",'r') as f:
                 tmp = f.readline()
@@ -30,7 +35,11 @@ class read_dict:
                     yield tmp
                     tmp = f.readline()
         if self.category == "exp":
-            with open("")
+            with open("sql.txt", 'r') as f:
+                tmp = f.readline()
+                while tmp:
+                    yield tmp
+                    tmp = f.readline()
 
 
 
