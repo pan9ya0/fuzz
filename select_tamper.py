@@ -7,7 +7,10 @@
 # @File    : select_tamper.py
 
 
-class tamper():
+import tamper
+
+
+class tampper():
     """
     @:parameter db_cate 指定数据库类型选择相应的绕过payload
     """
@@ -17,7 +20,12 @@ class tamper():
     def select_db_payload(self):
 
         if not self.db_cate:
-            print("将使用sqltamper 所有的tamper进行bypass尝试....")
+            print("[info]将使用sql-tamper 所有的tamper进行内置规则 随机FUZZ bypass尝试....")
             return 0
 
-    def
+    def use_tamper(self):
+        return tamper.versionedmorekeywords.tamper('')
+
+
+g = tampper(None).use_tamper()
+print(g)

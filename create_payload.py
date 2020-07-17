@@ -81,11 +81,6 @@ class create_payload:
         blanks = ("%09", "%0A", "%0C", "%0D")
         tmp = random.choice(blanks)
         return payload.replace(" ","{}".format(tmp))
-# a = input("input")
-# while a:
-#     g = create_payload(a)
-#     print(g.high_low_deform())
-#     a = input("input")
 
 
 a = create_payload()

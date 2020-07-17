@@ -15,6 +15,7 @@ import param_handle
 from read_dict import from_db_read
 import create_payload
 
+#TODO: 通过网站各个文件的已知或者fuzz的参数, 进行sql注入fuzz，对于能够bypass的语句，生成tamper，调用sqlmapapi
 
 def main():
     a = sys.argv

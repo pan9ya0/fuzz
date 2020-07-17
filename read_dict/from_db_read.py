@@ -13,8 +13,11 @@ def con_db():
                                   host='127.0.0.1',
                                   database='sql_fuzz')
     cursor = cnx.cursor()
-    query = "select * from reserved_words"
+    query = "select reserved_word from reserved_words"
     cursor.execute(query)
-    for (ids, reserved_word, reserved_type, note)in cursor:
-        yield reserved_word
+    for (word) in cursor:
+        yield word[0]
+
     cnx.close()
+
+
